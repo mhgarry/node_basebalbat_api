@@ -4,41 +4,270 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<body>
-	<div class="container">
-		<h1>Baseball Bats</h1>
+    <title>{%NAME%}{%IMAGE%} /// BASEBALL BATS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
 
-		<figure class="baseball_bat">
-			<a href="/" class="back_button">
-				<span class="image-left"></span>Back
-			</a>
-			<div class="product__hero">
-				<span class="bat_image bat_image-1">{%IMAGE%}</span>
-				<span class="bat_image bat_image-2">{%IMAGE%}</span>
-				<span class="bat_image bat_image-3">{%IMAGE%}</span>
-				<span class="bat_image bat_image-4">{%IMAGE%}</span>
-				<span class="bat_image bat_image-5">{%IMAGE%}</span>
-				<span class="bat_image bat_image-6">{%IMAGE%}</span>
-				<span class="bat_image bat_image-7">{%IMAGE%}</span>
-				<span class="bat_image bat_image-8">{%IMAGE%}</span>
-				<span class="bat_image bat_image-9">{%IMAGE%}</span>
-			</div>
-			<h2 class="bat_manufacturer">{%MANUFACTURER%}</h2>
-			<h2 class="bat_name">{%NAME%}</h2>
-			<div class="bat_details">
-				<p><span class="image-left"></span>{%MATERIAL%}</p>
-				<p><span class="image-left"></span>{%LENGTHS_WEIGHTS%}</p>
-				<p><span class="image-left"></span>{%BARREL_DIAMETER%}</p>
-				<p><span class="image-left"></span>{%CERTIFICATION%}</p>
-			</div>
+      html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+      }
 
-			<a href="#" class="bat_link">
-				<span class="image-left"></span>
-				<span>Check it out at {%LINK%}!</span>
-			</a>
+      body {
+        padding: 5rem 5rem 10rem;
+        line-height: 1.7;
+        font-family: 'Bebas Neue', sans-serif;
+        color: #555;
+        min-height: 100vh;
+        background: linear-gradient(to bottom right, #9be15d, #00e3ae);
+      }
 
-			<p class="bat_description">{%DESCRIPTION%}</p>
-		</figure>
-	</div>
-</body>
+      h1 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 6rem;
+        color: white;
+        transform: skewY(-5deg);
+        text-align: center;
+        position: relative;
+        word-spacing: 3px;
+      }
+
+      h1::before {
+        content: '';
+        display: block;
+        height: 65%;
+        width: 49%;
+        position: absolute;
+        top: 105%;
+        left: 50%;
+        background: linear-gradient(to bottom, #9be15d, #00e3ae);
+        opacity: 0.8;
+        z-index: -1;
+        transform: skewY(370deg) translate(-50%, -50%);
+      }
+
+      .container {
+        width: 95rem;
+        margin: 0 auto;
+      }
+
+      .baseball-bat {
+        width: 60rem;
+        margin: 0 auto;
+        margin-top: 9rem;
+        background: white;
+        box-shadow: 0 3rem 6rem 1rem rgba(0, 0, 0, 0.2);
+        position: relative;
+      }
+
+      .bat-hero {
+        position: relative;
+        height: 22rem;
+        overflow: hidden;
+      }
+
+      .bat-hero::before {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to left bottom, #9be15d, #00e3ae);
+        opacity: 0.5;
+        z-index: 100;
+      }
+
+      .bat-image {
+        font-size: 15rem;
+        position: absolute;
+      }
+
+      .bat-image--1 {
+        top: -4rem;
+        left: -2rem;
+        z-index: 10;
+      }
+
+      .bat-image--2 {
+        top: -6rem;
+        left: 9rem;
+      }
+
+      .bat-image--3 {
+        top: -4rem;
+        right: 15rem;
+      }
+
+      .bat-image--4 {
+        top: -5rem;
+        right: 2rem;
+        z-index: 10;
+      }
+
+      .bat-image--5 {
+        bottom: -9rem;
+        left: 18rem;
+      }
+
+      .bat-image--6 {
+        bottom: -8rem;
+        left: 5rem;
+      }
+
+      .bat-image--7 {
+        bottom: -12rem;
+        right: 14rem;
+      }
+
+      .bat-image--8 {
+        bottom: -8rem;
+        right: -2rem;
+      }
+
+      .bat-image--9 {
+        top: -7rem;
+        left: 19rem;
+      }
+
+      .back-button:link,
+      .back-button:visited {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        z-index: 1000;
+        color: #555;
+        background-color: white;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+        border-radius: 100rem;
+        padding: 0 2rem;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+      }
+
+      .back-button:hover,
+      .back-button:active {
+        background-color: #79e17b;
+      }
+
+      .bat-name .bat-manufacturer {
+        background: linear-gradient(to bottom, #9be15d, #00e3ae);
+        padding: 1rem;
+        font-family: 'Megrim', sans-serif;
+        font-size: 4rem;
+        color: white;
+        text-align: center;
+        word-spacing: 2px;
+      }
+
+      .bat-details {
+        background-color: #eee;
+        padding: 4rem 6rem;
+        font-size: 1.9rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.5rem;
+      }
+
+      .bat-description {
+        padding: 5rem 6rem;
+        font-size: 1.6rem;
+        line-height: 1.8;
+      }
+
+      .bat-link:link,
+      .bat-link:visited {
+        display: block;
+        background-color: #79e17b;
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem;
+        text-align: center;
+        transform: scale(1.07) skewX(-20deg);
+        box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+      }
+
+      .bat-link:hover,
+      .bat-link:active {
+        background-color: #9be15d;
+        transform: scale(1.1) skewX(-20deg);
+      }
+
+      .bat-link span {
+        transform: skewX(20deg);
+      }
+
+      .image-left {
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+
+      .image-right {
+        font-size: 2rem;
+        margin-left: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Baseball Bats</h1>
+
+      <figure class="baseball-bat">
+        <a href="/" class="back-button">
+          <span class="image-left"></span>Back
+        </a>
+        <div class="bat-hero">
+          <span class="bat-image bat-image--1">{%IMAGE%}</span>
+          <span class="bat-image bat-image--2">{%IMAGE%}</span>
+          <span class="bat-image bat-image--3">{%IMAGE%}</span>
+          <span class="bat-image bat-image--4">{%IMAGE%}</span>
+          <span class="bat-image bat-image--5">{%IMAGE%}</span>
+          <span class="bat-image bat-image--6">{%IMAGE%}</span>
+          <span class="bat-image bat-image--7">{%IMAGE%}</span>
+          <span class="bat-image bat-image--8">{%IMAGE%}</span>
+          <span class="bat-image bat-image--9">{%IMAGE%}</span>
+        </div>
+        <h2 class="bat-manufacturer">{%MANUFACTURER%}</h2>
+        <h2 class="bat-name">{%NAME%}</h2>
+        <div class="bat-details">
+          <p><span class="image-left"></span>{%MATERIAL%}</p>
+          <p><span class="image-left"></span>{%LENGTHS-WEIGHTS%}</p>
+          <p><span class="image-left"></span>{%BARREL-DIAMETER%}</p>
+          <p><span class="image-left"></span>{%CERTIFICATION%}</p>
+        </div>
+
+        <a href="#" class="bat-link">
+          <span class="image-left"></span>
+          <span>Check it out at {%LINK%}!</span>
+        </a>
+
+        <p class="bat-description">{%DESCRIPTION%}</p>
+      </figure>
+    </div>
+  </body>
 </html>
