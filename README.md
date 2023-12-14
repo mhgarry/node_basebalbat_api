@@ -11,6 +11,7 @@
   - [Packages](#packages)
   - [Features](#features)
   - [Resources](#resources)
+    - [Citations](#citations)
   - [Tests](#tests)
   - [How to Contribute](#how-to-contribute)
   - [Questions](#questions)
@@ -42,7 +43,13 @@ This application features a dynamic and aesthetic way to compare baseball bat mo
 
 ## Resources
 
-Node.js, yarn, nodemon, javascript, fs
+Node.js, yarn, nodemon, javascript, fs, https://clutchpoints.com/best-baseball-bats, https://www.justbats.com/blog/post/best-bbcor-baseball-bats/
+
+### Citations
+
+     - https://www.justbats.com/product/louisville-slugger-atlas-bbcor-baseball-bat--wbl2845010/36748/ in the file bats.json.
+     - https://www.justbats.com/product/marucci-catx-bbcor-baseball-bat--mcbcx/35855/ in the file bats.json.
+     - https://www.justbats.com/product/demarini-voodoo-one-bbcor-baseball-bat-wbd2461010/36792/ in the file bats.json
 
 ## Tests
 
