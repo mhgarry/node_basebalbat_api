@@ -11,5 +11,8 @@
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
   }
 }
