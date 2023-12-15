@@ -1,28 +1,32 @@
 <figure class="card">
-  <div class="card-image">{%IMAGE%}</div>
+  <div class="card-image">{%BAT_IMAGE%}</div>
 
   <div class="card-title-box">
-		<h2 class="card-title">{%MANUFACTURER%}
-    <h2 class="card-title">{%NAME%}</h2>
+		<h2 class="card-title">{%BAT_MANUFACTURER%}
+    <h2 class="card-title">{%BAT_NAME%}</h2>
   </div>
 
   <div class="card-details">
     <div class="card-detail-box">
-      <h6 class="card-detail card-detail--certified  {%CERTIFICATION%}">
+      <h6 class="card-detail card-detail--certified  {%BAT_CERTIFICATION%}">
        BBCOR CERTIFIED!
       </h6>
     </div>
 
     <div class="card-detail-box">
-      <h6 class="card-detail">{%MATERIAL%}</h6>
+      <h6 class="card-detail">{%BAT_MATERIAL%}</h6>
     </div>
 
     <div class="card-detail-box">
-      <h6 class="card-detail card-detail--size">{%LENGTHS_WEIGHTS%}</h6>
+      <h6 class="card-detail card-detail--size">{%BAT_LENGTH_WEIGHT%}</h6>
+    </div>
+
+    <div class="card-detail-box">
+      <h6 class="card-detail card-detail--size">{%BAT_BARREL_RADIUS%}</h6>
     </div>
   </div>
 
-  <a class="card-link" href="/bats?id={%ID%}">
+  <a class="card-link" href="/bats?id={%BAT_ID%}">
     <span>See more <i class="image-right">👉</i></span>
   </a>
 </figure>
