@@ -22,12 +22,39 @@
       html {
         font-size: 62.5%;
         box-sizing: border-box;
+        background-image: linear-gradient(
+          300deg,
+          hsl(24deg 50% 39%) 0%,
+          hsl(24deg 47% 40%) 1%,
+          hsl(24deg 44% 40%) 3%,
+          hsl(25deg 41% 41%) 5%,
+          hsl(25deg 39% 42%) 7%,
+          hsl(26deg 37% 43%) 10%,
+          hsl(26deg 35% 44%) 13%,
+          hsl(27deg 33% 44%) 17%,
+          hsl(28deg 31% 45%) 21%,
+          hsl(28deg 30% 45%) 27%,
+          hsl(29deg 28% 46%) 34%,
+          hsl(30deg 27% 47%) 44%,
+          hsl(30deg 25% 52%) 54%,
+          hsl(30deg 27% 56%) 63%,
+          hsl(30deg 30% 60%) 71%,
+          hsl(30deg 33% 64%) 77%,
+          hsl(30deg 36% 68%) 82%,
+          hsl(30deg 41% 71%) 86%,
+          hsl(30deg 46% 75%) 90%,
+          hsl(30deg 53% 78%) 93%,
+          hsl(30deg 61% 81%) 96%,
+          hsl(30deg 73% 84%) 98%,
+          hsl(30deg 88% 86%) 100%
+        );
       }
 
       body {
         padding: 2rem 2rem 10rem;
         line-height: 1.7;
         font-family: 'Bebas Neue', sans-serif;
+        color: #555;
         min-height: 100vh;
         background-image: url('../data/assets/images/Seamless-and-High-Resolution-Wood-Textures.svg');
       }
@@ -45,6 +72,7 @@
       .container {
         width: 95rem;
         margin: 0 auto;
+        background-color: #fff;
       }
 
       .card-container {
@@ -55,7 +83,8 @@
         background: white;
         box-shadow: 0 2rem 6rem 1rem rgba(0, 0, 0, 0.15);
         margin-bottom: 5rem;
-        transform: skewX(-20deg);
+        background-color: #ec2e2e;
+        border-radius: 20px;
         display: flex;
         transition: all 0.5s;
       }
@@ -64,32 +93,35 @@
         font-size: 5.5rem;
         line-height: 1.2;
         padding: 1.5rem 6rem 0.5rem 1.5rem;
-        letter-spacing: -4rem;
-        transform: skewX(20deg);
       }
-
+      .card-image img {
+        max-width: 200px;
+        max-height: 200px;
+      }
       .card-title-box {
-        background: linear-gradient(to bottom, #9be15d, #00e3ae);
+        background-color: #ec2e2e;
         margin-right: auto;
         display: flex;
         align-items: center;
-        padding: 0 3rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 34% !important;
       }
 
       .card-title {
         font-family: 'Megrim', sans-serif;
         color: white;
-        font-size: 3.25rem;
-        transform: skewX(20deg);
+        font-size: 2rem;
       }
 
       .card-details {
         display: flex;
+        color: #ffffff;
       }
 
       .card-detail-box {
         align-self: stretch;
-        border-right: 1px solid #ddd;
+        border-right: 2px solid #fff;
         display: flex;
         align-items: center;
       }
@@ -101,7 +133,7 @@
       .card-detail {
         font-weight: 400;
         font-size: 1.8rem;
-        transform: skewX(20deg);
+
         padding: 1.75rem;
       }
 
@@ -109,7 +141,7 @@
         font-weight: 900;
         text-transform: uppercase;
         font-size: 1.9rem;
-        background-image: linear-gradient(to right, #9be15d, #00e3ae);
+        background-color: #ec2e2e;
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
@@ -123,7 +155,7 @@
       .card-link:link,
       .card-link:visited {
         flex: 0 0 auto;
-        background-color: #79e17b;
+        background-color: #ec2e2e;
         color: white;
         font-size: 1.6rem;
         font-weight: 900;
@@ -139,7 +171,7 @@
 
       .image-link:hover,
       .image-link:active {
-        background-color: #9be15d;
+        background-color: #ec2e2e;
       }
 
       .card-link span {
