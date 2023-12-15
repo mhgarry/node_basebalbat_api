@@ -1,16 +1,15 @@
 <figure class="card">
-  <div class="card-image"><img src="{%BAT_IMAGE%}"></img></div>
+  <div class="card-image"><img src="{%BAT_IMAGE%}" /></div>
 
   <div class="card-title-box">
-		<h2 class="card-title">MANUFACTURUER: {%BAT_MANUFACTURER%} </h2>
-
+    <h2 class="card-title">MANUFACTURER: {%BAT_MANUFACTURER%}</h2>
     <h2 class="card-title">NAME: {%BAT_NAME%}</h2>
   </div>
 
   <div class="card-details">
     <div class="card-detail-box">
-      <h6 class="card-detail card-detail--certified  {%BAT_CERTIFICATION%}">
-       BBCOR CERTIFIED!
+      <h6 class="card-detail card-detail--certified {%BAT_CERTIFICATION%}">
+        BBCOR CERTIFIED!
       </h6>
     </div>
 
@@ -21,18 +20,18 @@
     <div class="card-detail-box">
       <h6 class="card-detail card-detail--size">Size:</h6>
       <select name="bat-size" class="card-detail-dropdown">
-        {% for length, weight in bat.lengths|zip(bat.weights, bat.lengths) %}
-          <option value="{{ length }}-{{ weight }}">{%BAT_LENGTH%}-{%BAT_WEIGHT%}</option>
+        {% for length, weight in bat.lengths|zip(bat.weights) %}
+        <option value="{{ length }}-{{ weight }}">{%BAT_SIZE_OPTIONS%}</option>
         {% endfor %}
       </select>
     </div>
 
     <div class="card-detail-box">
-      <h6 class="card-detail card-detail--size">BARREL RADIUS: {%BAT_BARREL_RADIUS%}</h6>
+      <h6 class="card-detail card-detail--size">
+        BARREL RADIUS: {%BAT_BARREL_RADIUS%}
+      </h6>
     </div>
   </div>
 
-  <a class="card-link" href="/bats?id={%BAT_ID%}">
-    See more
-  </a>
+  <a class="card-link" href="/bats?id={%BAT_ID%}"> See more </a>
 </figure>

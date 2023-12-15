@@ -12,8 +12,6 @@ const batData = fs.readFileSync(`${__dirname}/data/bats.json`, 'utf-8');
 const batDataObject = JSON.parse(batData);
 // read and load our templates
 const renderBats = (temp, bat) => {
-  // variable to define and dynamically replace our templates with
-  // regular expressions to match our templates globally and replace them with our data
   let output = temp.replace(/{%BAT_MANUFACTURER%}/g, bat.manufacturer);
   output = output.replace(/{%BAT_NAME%}/g, bat.batName);
   output = output.replace(/{%BAT_IMAGE%}/g, bat.image);
@@ -21,11 +19,17 @@ const renderBats = (temp, bat) => {
 
   for (let i = 0; i < bat.lengths.length; i++) {
     const currentLength = bat.lengths[i];
-    output = output.replace(/{%BAT_LENGTH%}/g, currentLength);
+    output = output.replace(
+      new RegExp(`{%BAT_LENGTH_${i}%}`, 'g'),
+      currentLength
+    );
   }
   for (let i = 0; i < bat.weights.length; i++) {
-    const currentWidth = bat.weights[i];
-    output = output.replace(/{%BAT_WEIGHT%}/g, currentWidth);
+    const currentWeight = bat.weights[i];
+    output = output.replace(
+      new RegExp(`{%BAT_WEIGHT_${i}%}`, 'g'),
+      currentWeight
+    );
   }
 
   output = output.replace(/{%BAT_BARREL_RADIUS%}/g, bat.barrel);
