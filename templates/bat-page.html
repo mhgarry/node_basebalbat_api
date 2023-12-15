@@ -31,7 +31,6 @@
         font-family: 'Bebas Neue', sans-serif;
         color: #555;
         min-height: 100vh;
-        background: linear-gradient(to bottom right, #9be15d, #00e3ae);
       }
 
       h1 {
@@ -96,52 +95,6 @@
         position: absolute;
       }
 
-      .bat-image--1 {
-        top: -4rem;
-        left: -2rem;
-        z-index: 10;
-      }
-
-      .bat-image--2 {
-        top: -6rem;
-        left: 9rem;
-      }
-
-      .bat-image--3 {
-        top: -4rem;
-        right: 15rem;
-      }
-
-      .bat-image--4 {
-        top: -5rem;
-        right: 2rem;
-        z-index: 10;
-      }
-
-      .bat-image--5 {
-        bottom: -9rem;
-        left: 18rem;
-      }
-
-      .bat-image--6 {
-        bottom: -8rem;
-        left: 5rem;
-      }
-
-      .bat-image--7 {
-        bottom: -12rem;
-        right: 14rem;
-      }
-
-      .bat-image--8 {
-        bottom: -8rem;
-        right: -2rem;
-      }
-
-      .bat-image--9 {
-        top: -7rem;
-        left: 19rem;
-      }
 
       .back-button:link,
       .back-button:visited {
@@ -242,31 +195,34 @@
           <span class="image-left"></span>Back
         </a>
         <div class="bat-hero">
-          <span class="bat-image bat-image--1">{%IMAGE%}</span>
-          <span class="bat-image bat-image--2">{%IMAGE%}</span>
-          <span class="bat-image bat-image--3">{%IMAGE%}</span>
-          <span class="bat-image bat-image--4">{%IMAGE%}</span>
-          <span class="bat-image bat-image--5">{%IMAGE%}</span>
-          <span class="bat-image bat-image--6">{%IMAGE%}</span>
-          <span class="bat-image bat-image--7">{%IMAGE%}</span>
-          <span class="bat-image bat-image--8">{%IMAGE%}</span>
-          <span class="bat-image bat-image--9">{%IMAGE%}</span>
+          <img src="{%BAT_IMAGE%}"class="bat-image bat-image--1"></img>
         </div>
-        <h2 class="bat-manufacturer">{%MANUFACTURER%}</h2>
-        <h2 class="bat-name">{%NAME%}</h2>
+        <h2 class="bat-manufacturer">MANUFACTURER: {%BAT_MANUFACTURER%}</h2>
+        <h2 class="bat-name">NAME: {%BAT_NAME%}</h2>
         <div class="bat-details">
-          <p><span class="image-left"></span>{%MATERIAL%}</p>
-          <p><span class="image-left"></span>{%BAT_LENGTH%}{%BAT_WEIGHT%}</p>
-          <p><span class="image-left"></span>{%BARREL_DIAMETER%}</p>
-          <p><span class="image-left"></span>{%CERTIFICATION%}</p>
+          <p><span class="image-left"></span>MATERIAL: {%BAT_MATERIAL%}</p>
+          <div class="card-detail-box">
+            <h6 class="card-detail card-detail--size">Size:</h6>
+            <select name="bat-size" class="card-detail-dropdown">
+              {% for length, weight in bat.lengths|zip(bat.weights) %}
+              <option value="{{ length }}-{{ weight }}">
+                {%BAT_SIZE_OPTIONS%}
+              </option>
+              {% endfor %}
+            </select>
+          </div>
+          <p>
+            <span class="image-left"></span>BARREL RADIUS: {%BAT_BARREL_RADIUS%}
+          </p>
+          <p><span class="image-left {%BAT_CERTIFICATION%}"></span>BBCOR!</p>
         </div>
 
-        <a href="#" class="bat-link">
+        <a href="{%BAT_LINK%}" class="bat-link">
           <span class="image-left"></span>
-          <span>Check it out at {%LINK%}!</span>
+          <span>Wanna Slug? Click Here!</span>
         </a>
 
-        <p class="bat-description">{%DESCRIPTION%}</p>
+        <p class="bat-description">{%BAT_DESCRIPTION%}</p>
       </figure>
     </div>
   </body>

@@ -28,7 +28,8 @@ const tempBat = fs.readFileSync(
 // create server instance
 const server = http.createServer((req, res, err) => {
   // require url module pathname for routing purposes
-  const pathname = req.url;
+  // use query variable and object destructuring on our urls to parse each link
+  const { query, pathname } = url.parse(req.url, true);
   //home page
   if (pathname === '/' || pathname === '/overview') {
     // render our overview page
@@ -45,7 +46,11 @@ const server = http.createServer((req, res, err) => {
 
     // baseball bat page
   } else if (pathname === '/baseball-bats') {
-    res.end('baseball bats here!');
+    // query for bat to displayy by storing bats in a variable with our query string and id
+    const baseballBat = batDataObject[query.id];
+    // use our render function to fill in templates
+    const batpagesHtml = renderBats(tempBat, baseballBat);
+    res.end(batpagesHtml);
 
     //api
   } else if (pathname === '/api') {
