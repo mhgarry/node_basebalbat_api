@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{%NAME%}{%IMAGE%} /// BASEBALL BATS</title>
+    <title>{%BAT_MANUFACTURER%} | {%BAT_NAME%}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,12 +18,14 @@
         margin: 0;
         padding: 0;
         box-sizing: inherit;
+
       }
 
       html {
         font-size: 62.5%;
         box-sizing: border-box;
       }
+      
 
       body {
         padding: 5rem 5rem 10rem;
@@ -31,42 +33,56 @@
         font-family: 'Bebas Neue', sans-serif;
         color: #555;
         min-height: 100vh;
+        background-image: linear-gradient(
+          300deg,
+          hsl(24deg 50% 39%) 0%,
+          hsl(24deg 47% 40%) 1%,
+          hsl(24deg 44% 40%) 3%,
+          hsl(25deg 41% 41%) 5%,
+          hsl(25deg 39% 42%) 7%,
+          hsl(26deg 37% 43%) 10%,
+          hsl(26deg 35% 44%) 13%,
+          hsl(27deg 33% 44%) 17%,
+          hsl(28deg 31% 45%) 21%,
+          hsl(28deg 30% 45%) 27%,
+          hsl(29deg 28% 46%) 34%,
+          hsl(30deg 27% 47%) 44%,
+          hsl(30deg 25% 52%) 54%,
+          hsl(30deg 27% 56%) 63%,
+          hsl(30deg 30% 60%) 71%,
+          hsl(30deg 33% 64%) 77%,
+          hsl(30deg 36% 68%) 82%,
+          hsl(30deg 41% 71%) 86%,
+          hsl(30deg 46% 75%) 90%,
+          hsl(30deg 53% 78%) 93%,
+          hsl(30deg 61% 81%) 96%,
+          hsl(30deg 73% 84%) 98%,
+          hsl(30deg 88% 86%) 100%
+        );
       }
 
       h1 {
         font-family: 'Bebas Neue', sans-serif;
         font-size: 6rem;
-        color: white;
-        transform: skewY(-5deg);
+        color: #281c1e; 
         text-align: center;
         position: relative;
         word-spacing: 3px;
       }
 
-      h1::before {
-        content: '';
-        display: block;
-        height: 65%;
-        width: 49%;
-        position: absolute;
-        top: 105%;
-        left: 50%;
-        background: linear-gradient(to bottom, #9be15d, #00e3ae);
-        opacity: 0.8;
-        z-index: -1;
-        transform: skewY(370deg) translate(-50%, -50%);
-      }
+
 
       .container {
         width: 95rem;
         margin: 0 auto;
+        background-color: #ffffff;
       }
 
       .baseball-bat {
         width: 60rem;
         margin: 0 auto;
         margin-top: 9rem;
-        background: white;
+       background-color: #ec2e2e;
         box-shadow: 0 3rem 6rem 1rem rgba(0, 0, 0, 0.2);
         position: relative;
       }
@@ -85,7 +101,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-image: linear-gradient(to left bottom, #9be15d, #00e3ae);
+       background-color:#281c1e;
         opacity: 0.5;
         z-index: 100;
       }
@@ -118,47 +134,59 @@
 
       .back-button:hover,
       .back-button:active {
-        background-color: #79e17b;
+        background-color: #ec2e2e
       }
 
-      .bat-name .bat-manufacturer {
-        background: linear-gradient(to bottom, #9be15d, #00e3ae);
-        padding: 1rem;
-        font-family: 'Megrim', sans-serif;
-        font-size: 4rem;
+      .bat-name {
+        padding:.3rem;
+        font-size: 2rem;
         color: white;
-        text-align: center;
+        text-align: left;
         word-spacing: 2px;
       }
 
+      .bat-manufacturer {
+        padding: .3rem;
+        font-size: 2rem;
+        color: white;
+        text-align: left;
+        word-spacing: 2px;
+      }
       .bat-details {
         background-color: #eee;
         padding: 4rem 6rem;
         font-size: 1.9rem;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr 1fr;
         grid-gap: 1.5rem;
+   
       }
-
+      .bat-details p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
       .bat-description {
         padding: 5rem 6rem;
-        font-size: 1.6rem;
+   
         line-height: 1.8;
+        color: #fff;
+        font-size: 1.9rem;
       }
 
       .bat-link:link,
       .bat-link:visited {
         display: block;
-        background-color: #79e17b;
+        background-color:#281c1e;
         color: white;
-        font-size: 1.6rem;
+        font-size: 2rem;
         font-weight: 700;
         text-transform: uppercase;
         text-decoration: none;
         padding: 1.5rem;
         text-align: center;
-        transform: scale(1.07) skewX(-20deg);
-        box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -167,22 +195,18 @@
 
       .bat-link:hover,
       .bat-link:active {
-        background-color: #9be15d;
-        transform: scale(1.1) skewX(-20deg);
+        background-color: #ec2e2e;
+        color: #281c1e;
+        transform: scale(1.1);
+        border: 2px solid #281c1e;
       }
-
-      .bat-link span {
-        transform: skewX(20deg);
+      .card-detail-box img {
+        width: 50px;
+        height: 50px;
       }
-
-      .image-left {
-        font-size: 2rem;
-        margin-right: 1rem;
-      }
-
-      .image-right {
-        font-size: 2rem;
-        margin-left: 1rem;
+      .bbcor-logo {
+        width: 100px;
+        height: 100px;
       }
     </style>
   </head>
@@ -214,7 +238,7 @@
           <p>
             <span class="image-left"></span>BARREL RADIUS: {%BAT_BARREL_RADIUS%}
           </p>
-          <p><span class="image-left {%BAT_CERTIFICATION%}"></span>BBCOR!</p>
+           <img class="bbcor-logo" src="{%BAT_CERTIFICATION%}"/></p>
         </div>
 
         <a href="{%BAT_LINK%}" class="bat-link">

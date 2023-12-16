@@ -2,14 +2,18 @@
   <div class="card-image"><img src="{%BAT_IMAGE%}" /></div>
 
   <div class="card-title-box">
-    <h2 class="card-title">MANUFACTURER: {%BAT_MANUFACTURER%}</h2>
-    <h2 class="card-title">NAME: {%BAT_NAME%}</h2>
+    <h2 class="card-title">
+      MANUFACTURER: <span class="bat-name-card">{%BAT_MANUFACTURER%}</span>
+    </h2>
+    <h3 class="card-title">
+      NAME: <span class="bat-name-card">{%BAT_NAME%}</span>
+    </h3>
   </div>
 
   <div class="card-details">
     <div class="card-detail-box">
       <h6 class="card-detail card-detail--certified {%BAT_CERTIFICATION%}">
-        BBCOR CERTIFIED!
+        <img src="{%BAT_CERTIFICATION%}" />
       </h6>
     </div>
 
@@ -33,5 +37,5 @@
     </div>
   </div>
 
-  <a class="card-link" href="/baseball-bats?id={%BAT_ID%}"> See more </a>
+  <a class="card-link" href="/baseball-bats?id={%BAT_ID%}"> LET'S SLUG! </a>
 </figure>

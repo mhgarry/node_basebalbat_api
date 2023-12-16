@@ -88,11 +88,12 @@
         display: flex;
         transition: all 0.5s;
       }
-
       .card-image {
-        font-size: 5.5rem;
-        line-height: 1.2;
-        padding: 1.5rem 6rem 0.5rem 1.5rem;
+        flex: 0 0 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
       }
       .card-image img {
         max-width: 200px;
@@ -104,16 +105,26 @@
         display: flex;
         align-items: center;
         flex-direction: row;
+        width: 100px;
         flex-wrap: wrap;
-        width: 34% !important;
       }
-
       .card-title {
         font-family: 'Megrim', sans-serif;
-        color: white;
+        color: #281c1e;
         font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        /* align-content: center; */
+        align-items: flex-start;
       }
 
+      .bat-name-card {
+        font-size: 2rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
       .card-details {
         display: flex;
         color: #ffffff;
@@ -124,6 +135,7 @@
         border-right: 2px solid #fff;
         display: flex;
         align-items: center;
+        width: ;
       }
 
       .card-detail-box:last-child {
@@ -137,14 +149,10 @@
         padding: 1.75rem;
       }
 
-      .card-detail--certified {
-        font-weight: 900;
-        text-transform: uppercase;
-        font-size: 1.9rem;
-        background-color: #ec2e2e;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
+      .card-detail--certified img {
+        margin-top: 130px;
+        width: 50px;
+        height: 50px;
       }
 
       .card-detail--size {
@@ -156,8 +164,8 @@
       .card-link:visited {
         flex: 0 0 auto;
         background-color: #ec2e2e;
-        color: white;
-        font-size: 1.6rem;
+        color: #fff;
+        font-size: 3rem;
         font-weight: 900;
         text-transform: uppercase;
         text-decoration: none;
@@ -173,13 +181,31 @@
       .image-link:active {
         background-color: #ec2e2e;
       }
+      .card:hover {
+        transform: scale(1.2);
+        box-shadow: 0 3rem 8rem 2rem rgba(0, 0, 0, 0.15);
+      }
 
-      .card-link span {
-        transform: skewX(20deg);
+      .image-left {
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+
+      .image-right {
+        font-size: 2rem;
+        margin-left: 1rem;
+      }
+
+      .not-organic {
+        display: none;
+      }
+
+      .card-link:hover {
+        color: #000;
       }
 
       .card:hover {
-        transform: skewX(-20deg) scale(1.08);
+        transform: scale(1.2);
         box-shadow: 0 3rem 8rem 2rem rgba(0, 0, 0, 0.15);
       }
 
